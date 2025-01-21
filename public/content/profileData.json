@@ -1,0 +1,452 @@
+{
+  "general": {
+    "profilePhoto": "/content/media/profilePhoto.jpg",
+    "username": "kohei",
+    "displayName": "Kohei Foss",
+    "profession": "Operations Analyst",
+    "location": "Seattle",
+    "pronouns": "he/him",
+    "byline": "Operations Analyst in Seattle, he/him",
+    "website": "koheifoss.com",
+    "websiteURL": "http://koheifoss.com",
+    "about": null,
+    "status": {
+      "text": null,
+      "emoji": null,
+      "timestamp": null
+    },
+    "sectionOrder": [
+      "Work Experience",
+      "Side Projects",
+      "Volunteering",
+      "Certifications",
+      "Writing",
+      "Features",
+      "Education",
+      "Speaking",
+      "Contact",
+      "Awards",
+      "Exhibitions",
+      "Teams",
+      "Projects"
+    ]
+  },
+  "projects": [],
+  "sideProjects": [
+    {
+      "id": "GHumcZ53XCF1YiUawSBK",
+      "year": "2023",
+      "heading": "inreach",
+      "url": "https://www.youtube.com/watch?v=FaOrDQsuy8U&feature=youtu.be",
+      "collaborators": [],
+      "description": "Designed, prototyped, and pitched a CRM app for my introductory informatics class.",
+      "attachments": [
+        {
+          "type": "image",
+          "width": 1920,
+          "height": 1080,
+          "url": "/content/media/inreach-1.png"
+        },
+        {
+          "type": "image",
+          "width": 1920,
+          "height": 1080,
+          "url": "/content/media/inreach-2.png"
+        }
+      ],
+      "type": "sideProject",
+      "title": "inreach",
+      "company": ""
+    },
+    {
+      "id": "O5TVtn6GN2KRwNAzRegt",
+      "year": "2023",
+      "heading": "Houserules",
+      "url": "https://www.youtube.com/watch?v=y6_g4oMOcpw",
+      "collaborators": [],
+      "description": "Caltech Hacktech Hackathon subission. Led the ideation + design of a mobile app that tracks appliance use for shared households.",
+      "attachments": [
+        {
+          "type": "image",
+          "width": 1920,
+          "height": 1080,
+          "url": "/content/media/Houserules-1.png"
+        },
+        {
+          "type": "image",
+          "width": 1306,
+          "height": 1190,
+          "url": "/content/media/Houserules-2.png"
+        }
+      ],
+      "type": "sideProject",
+      "title": "Houserules",
+      "company": ""
+    }
+  ],
+  "exhibitions": [],
+  "talks": [],
+  "writing": [],
+  "awards": [],
+  "features": [],
+  "workExperience": [
+    {
+      "id": "xONroaMqjPdHfl01MZrh",
+      "year": "2024 — Now",
+      "heading": "Operations Intern at Samsara",
+      "url": "https://samsara.com",
+      "collaborators": [],
+      "description": "Created a new pricing system for all US/Canadian hardware shipments, saving 200 hours annually.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Operations Intern",
+      "company": "Samsara",
+      "location": ""
+    },
+    {
+      "id": "d4Tn8SCMJn32Hjm2koOP",
+      "year": "2024 — 2024",
+      "heading": "Project Management Intern at Starbucks",
+      "url": "https://starbucks.com",
+      "collaborators": [],
+      "description": "Created an interactive calendar app displaying business rhythms across a 450-person shared services organization.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Project Management Intern",
+      "company": "Starbucks",
+      "location": ""
+    },
+    {
+      "id": "ieHqmBSYhHFvueZfbVOR",
+      "year": "2021 — 2023",
+      "heading": "Project Management Intern at Fiveable",
+      "url": "https://fiveable.me",
+      "collaborators": [],
+      "description": "Led a user education initiative that increased participation in a cohort-based program by 25%.\n\nManaged/triaged product feedback + bug reports and conducted user acceptance testing for six features.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Project Management Intern",
+      "company": "Fiveable",
+      "location": ""
+    },
+    {
+      "id": "laUsFhLA9l1vK2FLiYP4",
+      "year": "2022 — 2023",
+      "heading": "Leadership Development Intern at Foster School of Business",
+      "url": "https://foster.uw.edu/academics/degree-programs/undergraduate-programs/foster-leadership-academy/",
+      "collaborators": [],
+      "description": "Drove user-feedback-based changes to the department's leadership certificate, increasing the completion rate by 50%.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Leadership Development Intern",
+      "company": "Foster School of Business",
+      "location": ""
+    }
+  ],
+  "volunteering": [
+    {
+      "id": "Q9U0pxzVDCI5tBEFFZcT",
+      "year": "2021 — Now",
+      "heading": "Senior VP at Delta Sigma Pi",
+      "url": "https://www.dspuw.net",
+      "collaborators": [],
+      "description": "Led recruiting efforts for DSP, a professional fraternity facilitating professional development & community building.",
+      "attachments": [],
+      "type": "volunteering",
+      "title": "Senior VP",
+      "organization": "Delta Sigma Pi",
+      "location": ""
+    },
+    {
+      "id": "Nu6oafRqYbnMg4mxOzXl",
+      "year": "2023 — 2024",
+      "heading": "Founding Member at UW PM Association",
+      "url": "https://uwpma.com",
+      "collaborators": [],
+      "description": "Creating community around students interested in careers within product, program, and project management.",
+      "attachments": [],
+      "type": "volunteering",
+      "title": "Founding Member",
+      "organization": "UW PM Association",
+      "location": ""
+    },
+    {
+      "id": "jy8X1bLthw93edxIjGiH",
+      "year": "2022 — 2023",
+      "heading": "VP at Husky Run Club",
+      "url": "https://dawgs.run",
+      "collaborators": [],
+      "description": "Raised $9000 for UW's recreational distance running club. Also managed spending/fundraising, and record-keeping.",
+      "attachments": [],
+      "type": "volunteering",
+      "title": "VP",
+      "organization": "Husky Run Club",
+      "location": null
+    }
+  ],
+  "education": [
+    {
+      "id": "5b2duPc2pOghsH6io9ya",
+      "year": "2021 — 2025",
+      "heading": "BA, Business Administration at University of Washington",
+      "url": "http://uw.edu",
+      "collaborators": [],
+      "description": "Sometimes went to class. Always drank coffee.",
+      "attachments": [],
+      "type": "education",
+      "degree": "BA, Business Administration",
+      "school": "University of Washington",
+      "location": ""
+    }
+  ],
+  "certifications": [
+    {
+      "id": "S7rah9H8OXhfi0wjHbgx",
+      "year": "2023",
+      "heading": "Essentials/Sharing/Advanced Badges from Notion",
+      "url": "https://www.credly.com/users/kohei/badges",
+      "collaborators": [],
+      "description": "Certified in all Notion features/use cases, including databases, permissions, and formulas.",
+      "attachments": [],
+      "type": "certification",
+      "name": "Essentials/Sharing/Advanced Badges",
+      "organization": "Notion"
+    },
+    {
+      "id": "cekqhhiTALxZ8kidLNTx",
+      "year": "2022",
+      "heading": "Project Management, Courses 1-5 from Coursera",
+      "url": "https://www.coursera.org/account/accomplishments/certificate/TQA78LLZ4UW3",
+      "collaborators": [],
+      "description": "Completed Courses 1-5 of Google's PM Certification.",
+      "attachments": [],
+      "type": "certification",
+      "name": "Project Management, Courses 1-5",
+      "organization": "Coursera"
+    }
+  ],
+  "contact": [
+    {
+      "id": "eFX1MCFnsgSf7hgZaWff",
+      "platform": "Email",
+      "handle": "hi@jonahfoss.com",
+      "url": "mailto:hi@jonahfoss.com"
+    }
+  ],
+  "allCollections": [
+    {
+      "name": "Work Experience",
+      "items": [
+        {
+          "id": "xONroaMqjPdHfl01MZrh",
+          "year": "2024 — Now",
+          "heading": "Operations Intern at Samsara",
+          "url": "https://samsara.com",
+          "collaborators": [],
+          "description": "Created a new pricing system for all US/Canadian hardware shipments, saving 200 hours annually.",
+          "attachments": [],
+          "type": "workExperience",
+          "title": "Operations Intern",
+          "company": "Samsara",
+          "location": ""
+        },
+        {
+          "id": "d4Tn8SCMJn32Hjm2koOP",
+          "year": "2024 — 2024",
+          "heading": "Project Management Intern at Starbucks",
+          "url": "https://starbucks.com",
+          "collaborators": [],
+          "description": "Created an interactive calendar app displaying business rhythms across a 450-person shared services organization.",
+          "attachments": [],
+          "type": "workExperience",
+          "title": "Project Management Intern",
+          "company": "Starbucks",
+          "location": ""
+        },
+        {
+          "id": "ieHqmBSYhHFvueZfbVOR",
+          "year": "2021 — 2023",
+          "heading": "Project Management Intern at Fiveable",
+          "url": "https://fiveable.me",
+          "collaborators": [],
+          "description": "Led a user education initiative that increased participation in a cohort-based program by 25%.\n\nManaged/triaged product feedback + bug reports and conducted user acceptance testing for six features.",
+          "attachments": [],
+          "type": "workExperience",
+          "title": "Project Management Intern",
+          "company": "Fiveable",
+          "location": ""
+        },
+        {
+          "id": "laUsFhLA9l1vK2FLiYP4",
+          "year": "2022 — 2023",
+          "heading": "Leadership Development Intern at Foster School of Business",
+          "url": "https://foster.uw.edu/academics/degree-programs/undergraduate-programs/foster-leadership-academy/",
+          "collaborators": [],
+          "description": "Drove user-feedback-based changes to the department's leadership certificate, increasing the completion rate by 50%.",
+          "attachments": [],
+          "type": "workExperience",
+          "title": "Leadership Development Intern",
+          "company": "Foster School of Business",
+          "location": ""
+        }
+      ]
+    },
+    {
+      "name": "Side Projects",
+      "items": [
+        {
+          "id": "GHumcZ53XCF1YiUawSBK",
+          "year": "2023",
+          "heading": "inreach",
+          "url": "https://www.youtube.com/watch?v=FaOrDQsuy8U&feature=youtu.be",
+          "collaborators": [],
+          "description": "Designed, prototyped, and pitched a CRM app for my introductory informatics class.",
+          "attachments": [
+            {
+              "type": "image",
+              "width": 1920,
+              "height": 1080,
+              "url": "/content/media/inreach-1.png"
+            },
+            {
+              "type": "image",
+              "width": 1920,
+              "height": 1080,
+              "url": "/content/media/inreach-2.png"
+            }
+          ],
+          "type": "sideProject",
+          "title": "inreach",
+          "company": ""
+        },
+        {
+          "id": "O5TVtn6GN2KRwNAzRegt",
+          "year": "2023",
+          "heading": "Houserules",
+          "url": "https://www.youtube.com/watch?v=y6_g4oMOcpw",
+          "collaborators": [],
+          "description": "Caltech Hacktech Hackathon subission. Led the ideation + design of a mobile app that tracks appliance use for shared households.",
+          "attachments": [
+            {
+              "type": "image",
+              "width": 1920,
+              "height": 1080,
+              "url": "/content/media/Houserules-1.png"
+            },
+            {
+              "type": "image",
+              "width": 1306,
+              "height": 1190,
+              "url": "/content/media/Houserules-2.png"
+            }
+          ],
+          "type": "sideProject",
+          "title": "Houserules",
+          "company": ""
+        }
+      ]
+    },
+    {
+      "name": "Volunteering",
+      "items": [
+        {
+          "id": "Q9U0pxzVDCI5tBEFFZcT",
+          "year": "2021 — Now",
+          "heading": "Senior VP at Delta Sigma Pi",
+          "url": "https://www.dspuw.net",
+          "collaborators": [],
+          "description": "Led recruiting efforts for DSP, a professional fraternity facilitating professional development & community building.",
+          "attachments": [],
+          "type": "volunteering",
+          "title": "Senior VP",
+          "organization": "Delta Sigma Pi",
+          "location": ""
+        },
+        {
+          "id": "Nu6oafRqYbnMg4mxOzXl",
+          "year": "2023 — 2024",
+          "heading": "Founding Member at UW PM Association",
+          "url": "https://uwpma.com",
+          "collaborators": [],
+          "description": "Creating community around students interested in careers within product, program, and project management.",
+          "attachments": [],
+          "type": "volunteering",
+          "title": "Founding Member",
+          "organization": "UW PM Association",
+          "location": ""
+        },
+        {
+          "id": "jy8X1bLthw93edxIjGiH",
+          "year": "2022 — 2023",
+          "heading": "VP at Husky Run Club",
+          "url": "https://dawgs.run",
+          "collaborators": [],
+          "description": "Raised $9000 for UW's recreational distance running club. Also managed spending/fundraising, and record-keeping.",
+          "attachments": [],
+          "type": "volunteering",
+          "title": "VP",
+          "organization": "Husky Run Club",
+          "location": null
+        }
+      ]
+    },
+    {
+      "name": "Certifications",
+      "items": [
+        {
+          "id": "S7rah9H8OXhfi0wjHbgx",
+          "year": "2023",
+          "heading": "Essentials/Sharing/Advanced Badges from Notion",
+          "url": "https://www.credly.com/users/kohei/badges",
+          "collaborators": [],
+          "description": "Certified in all Notion features/use cases, including databases, permissions, and formulas.",
+          "attachments": [],
+          "type": "certification",
+          "name": "Essentials/Sharing/Advanced Badges",
+          "organization": "Notion"
+        },
+        {
+          "id": "cekqhhiTALxZ8kidLNTx",
+          "year": "2022",
+          "heading": "Project Management, Courses 1-5 from Coursera",
+          "url": "https://www.coursera.org/account/accomplishments/certificate/TQA78LLZ4UW3",
+          "collaborators": [],
+          "description": "Completed Courses 1-5 of Google's PM Certification.",
+          "attachments": [],
+          "type": "certification",
+          "name": "Project Management, Courses 1-5",
+          "organization": "Coursera"
+        }
+      ]
+    },
+    {
+      "name": "Education",
+      "items": [
+        {
+          "id": "5b2duPc2pOghsH6io9ya",
+          "year": "2021 — 2025",
+          "heading": "BA, Business Administration at University of Washington",
+          "url": "http://uw.edu",
+          "collaborators": [],
+          "description": "Sometimes went to class. Always drank coffee.",
+          "attachments": [],
+          "type": "education",
+          "degree": "BA, Business Administration",
+          "school": "University of Washington",
+          "location": ""
+        }
+      ]
+    },
+    {
+      "name": "Contact",
+      "items": [
+        {
+          "id": "eFX1MCFnsgSf7hgZaWff",
+          "platform": "Email",
+          "handle": "hi@jonahfoss.com",
+          "url": "mailto:hi@jonahfoss.com"
+        }
+      ]
+    }
+  ]
+}
