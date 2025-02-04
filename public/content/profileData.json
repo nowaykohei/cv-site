@@ -11,14 +11,14 @@
     "websiteURL": "http://koheifoss.com",
     "about": null,
     "status": {
-      "text": null,
-      "emoji": null,
+      "text": "Finishing up my business degree and spending my free time bouldering!",
+      "emoji": "🧗🏼‍♂️",
       "timestamp": null
     },
     "sectionOrder": [
       "Work Experience",
       "Side Projects",
-      "Volunteering",
+      "Extracurriculars",
       "Certifications",
       "Writing",
       "Features",
@@ -132,7 +132,7 @@
     {
       "id": "laUsFhLA9l1vK2FLiYP4",
       "year": "2022 — 2023",
-      "heading": "Leadership Development Intern at Foster School of Business",
+      "heading": "Leadership Development Intern at The Foster School of Business",
       "url": "https://foster.uw.edu/academics/degree-programs/undergraduate-programs/foster-leadership-academy/",
       "collaborators": [],
       "description": "Drove user-feedback-based changes to the department's leadership certificate, increasing the completion rate by 50%.",
@@ -143,7 +143,7 @@
       "location": ""
     }
   ],
-  "volunteering": [
+  "Extracurriculars": [
     {
       "id": "Q9U0pxzVDCI5tBEFFZcT",
       "year": "2024 — 2025",
@@ -152,7 +152,7 @@
       "collaborators": [],
       "description": "Led recruiting efforts for DSP, a professional fraternity facilitating professional development & community building.",
       "attachments": [],
-      "type": "volunteering",
+      "type": "Extracurriculars",
       "title": "Senior VP",
       "organization": "Delta Sigma Pi",
       "location": ""
@@ -165,7 +165,7 @@
       "collaborators": [],
       "description": "Creating community around students interested in careers within product, program, and project management.",
       "attachments": [],
-      "type": "volunteering",
+      "type": "Extracurriculars",
       "title": "Founding Member",
       "organization": "UW PM Association",
       "location": ""
@@ -178,7 +178,7 @@
       "collaborators": [],
       "description": "Raised $9000 for UW's recreational distance running club. Also managed spending/fundraising, and record-keeping.",
       "attachments": [],
-      "type": "volunteering",
+      "type": "Extracurriculars",
       "title": "VP",
       "organization": "Husky Run Club",
       "location": null
@@ -347,17 +347,17 @@
       ]
     },
     {
-      "name": "Volunteering",
+      "name": "Extracurriculars",
       "items": [
         {
           "id": "Q9U0pxzVDCI5tBEFFZcT",
-          "year": "2021 — Now",
-          "heading": "Senior VP at Delta Sigma Pi",
+          "year": "2024 — 2025",
+          "heading": "Vice President at Delta Sigma Pi (Sigma Upsilon Chapter)",
           "url": "https://www.dspuw.net",
           "collaborators": [],
           "description": "Led recruiting efforts for DSP, a professional fraternity facilitating professional development & community building.",
           "attachments": [],
-          "type": "volunteering",
+          "type": "Extracurriculars",
           "title": "Senior VP",
           "organization": "Delta Sigma Pi",
           "location": ""
@@ -365,12 +365,12 @@
         {
           "id": "Nu6oafRqYbnMg4mxOzXl",
           "year": "2023 — 2024",
-          "heading": "Founding Member at UW PM Association",
+          "heading": "Founding Member at UW Project/Product/Program Management Association",
           "url": "https://uwpma.com",
           "collaborators": [],
           "description": "Creating community around students interested in careers within product, program, and project management.",
           "attachments": [],
-          "type": "volunteering",
+          "type": "Extracurriculars",
           "title": "Founding Member",
           "organization": "UW PM Association",
           "location": ""
@@ -378,12 +378,12 @@
         {
           "id": "jy8X1bLthw93edxIjGiH",
           "year": "2022 — 2023",
-          "heading": "VP at Husky Run Club",
+          "heading": "Vice President, Husky Run Club",
           "url": "https://dawgs.run",
           "collaborators": [],
           "description": "Raised $9000 for UW's recreational distance running club. Also managed spending/fundraising, and record-keeping.",
           "attachments": [],
-          "type": "volunteering",
+          "type": "Extracurriculars",
           "title": "VP",
           "organization": "Husky Run Club",
           "location": null
@@ -443,8 +443,8 @@
         {
           "id": "eFX1MCFnsgSf7hgZaWff",
           "platform": "Email",
-          "handle": "hi@jonahfoss.com",
-          "url": "mailto:hi@jonahfoss.com"
+          "handle": "koheifoss@gmail.com",
+          "url": "mailto:lei.fractal.0i@icloud.com"
         }
       ]
     }
