@@ -6,10 +6,10 @@
     "profession": "Operations Analyst",
     "location": "Seattle",
     "pronouns": "he/him",
-    "byline": "Project Manager and Photographer",
+    "byline": "New-grad project manager",
     "website": "koheifoss.com",
     "websiteURL": "http://koheifoss.com",
-    "about": "I build and improve business systems connecting teams with business-critical resources and information.",
+    "about": "I create business processes connecting people with the data they need to drive operational improvements."
     "status": {
       "text": "Finishing up my business degree and spending my free time bouldering!",
       "emoji": "🧗🏼‍♂️",
@@ -28,7 +28,8 @@
       "Awards",
       "Exhibitions",
       "Teams",
-      "Projects"
+      "Projects",
+      
     ]
   },
   "projects": [],
