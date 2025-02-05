@@ -424,7 +424,28 @@
           "url": "http://uw.edu",
           "collaborators": [],
           "description": "Studied abroad in New Zealand for six months and took on a six month co-op internship afterward. \n\nPart of a professional business fraternity and the distance running club.",
-          "attachments": [],
+          "attachments": [
+              {
+              "type": "image",
+              "width": 960,
+              "height": 1280,
+              "url": "/content/media/1 (2).png"
+              },
+    
+              {
+              "type": "image",
+              "width": 1006,
+              "height": 1280,
+              "url": "/content/media/1 (1).png"
+              },
+    
+              {
+              "type": "image",
+              "width": 960,
+              "height": 1280,
+              "url": "/content/media/1.png"
+              },
+          ],
           "type": "education",
           "degree": "BA, Business Administration",
           "school": "University of Washington",
