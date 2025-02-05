@@ -9,7 +9,7 @@
     "byline": "New-grad Project Manager",
     "website": "koheifoss.com",
     "websiteURL": "http://koheifoss.com",
-    "about": "I create business processes connecting people with the data they need to drive operational improvements.",
+    "about": "I create business processes that connect people with the data they need to drive operational improvements.",
     "sectionOrder": [
       "Education",
       "Work Experience",
@@ -117,7 +117,7 @@
       "heading": "Project Management Intern at Fiveable",
       "url": "https://fiveable.me",
       "collaborators": [],
-      "description": "Led a user education initiative that increased participation in a cohort-based program by 25%.\n\nManaged/triaged product feedback + bug reports and conducted user acceptance testing for six features.",
+      "description": "Standardized support ticketing interactions, resulting in an 85% decrease in average time to resolution. \n\nLed a user education initiative that increased participation in a cohort-based program by 25%.\n\nConducted user acceptance testing for six features, translating product feedback + bug reports into customer needs.\n\nCreated a process to audit vendor spend, saving $30k the year it was implemented. \n\nTrained 50+ employees on new project management software.",
       "attachments": [],
       "type": "workExperience",
       "title": "Project Management Intern",
@@ -130,7 +130,7 @@
       "heading": "Leadership Development Intern at The Foster School of Business",
       "url": "https://foster.uw.edu/academics/degree-programs/undergraduate-programs/foster-leadership-academy/",
       "collaborators": [],
-      "description": "Drove user-feedback-based changes to the department's leadership certificate, increasing the completion rate by 50%.",
+      "description": "Created this first-of-its-kind internship. Made changes to curriculum and scheduling that increased the course completion rate by 50% compared to the last cohort.",
       "attachments": [],
       "type": "workExperience",
       "title": "Leadership Development Intern",
@@ -156,7 +156,7 @@
       "id": "Nu6oafRqYbnMg4mxOzXl",
       "year": "2023 — 2024",
       "heading": "Founding Member at UW Product/Project/Program Management Association",
-      "url": "https://uwpma.com",
+      "url": "https://linktr.ee/uwpma",
       "collaborators": [],
       "description": "Creating community around students interested in careers within product, program, and project management.",
       "attachments": [],
@@ -225,7 +225,7 @@
       "id": "eFX1MCFnsgSf7hgZaWff",
       "platform": "Email",
       "handle": "hi@jonahfoss.com",
-      "url": "mailto:hi@jonahfoss.com"
+      "url": "mailto::hi@jonahfoss.com"
     }
   ],
   "allCollections": [
@@ -423,7 +423,7 @@
           "heading": "BA, Business Administration at University of Washington",
           "url": "http://uw.edu",
           "collaborators": [],
-          "description": "Sometimes went to class. Always drank coffee.",
+          "description": "Studied abroad in New Zealand for six months and took on a six month co-op internship afterward. \n\nPart of a professional business fraternity and the distance running club.",
           "attachments": [],
           "type": "education",
           "degree": "BA, Business Administration",
