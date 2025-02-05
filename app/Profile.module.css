@@ -14,7 +14,7 @@
 
 .profileHeader h1 {
   font-size: 20px;
-  font-weight: 350;
+  font-weight: 700;
 }
 
 .byline {
@@ -46,7 +46,7 @@
 
 .profileSection h3 {
   font-size: var(--font-size);
-  font-weight: normal;
+  font-weight: 500;
   margin-bottom: calc((var(--font-size) * var(--line-height)) / 2);
 }
 
