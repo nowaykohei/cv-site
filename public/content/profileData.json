@@ -1,9 +1,9 @@
 {
   "general": {
-    "profilePhoto": "/content/media/profile photo.png",
+    "profilePhoto": "/content/media/IMG_3884.png",
     "username": "kohei",
     "displayName": "Kohei Foss (he/him)",
-    "profession": "Supply Chain Analyst",
+    "profession": "Supply Chain Analyst at Samsara",
     "location": "Seattle",
     "pronouns": "he/him",
     "byline": "Supply Chain Analyst",
@@ -85,9 +85,22 @@
   "awards": [],
   "features": [],
   "workExperience": [
+     {
+      "id": "xONroaMqjPdHfl01MZrh",
+      "year": "2025 – Present",
+      "heading": "Supply Chain Analyst at Samsara",
+      "url": "https://samsara.com",
+      "collaborators": [],
+      "description": "Driving AI adoption in advanced supply-chain decisionmaking.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Supply Chain Analyst",
+      "company": "Samsara",
+      "location": ""
+    },
     {
       "id": "xONroaMqjPdHfl01MZrh",
-      "year": "2024 — Now",
+      "year": "2024 — 2025",
       "heading": "Operations Intern at Samsara",
       "url": "https://samsara.com",
       "collaborators": [],
@@ -245,6 +258,19 @@
     {
       "name": "Work Experience",
       "items": [
+       {
+          "id": "xONroaMqjPdHfl01MZrh",
+          "year": "2025 – Present",
+          "heading": "Supply Chain Analyst at Samsara",
+          "url": "https://samsara.com",
+          "collaborators": [],
+          "description": "Driving AI adoption in advanced supply-chain decisionmaking.",
+          "attachments": [],
+          "type": "workExperience",
+          "title": "Supply Chain Analyst",
+          "company": "Samsara",
+          "location": ""
+        },
         {
           "id": "xONroaMqjPdHfl01MZrh",
           "year": "2024 — Now",
@@ -485,7 +511,7 @@
         {
           "id": "eFX1MCFnsgSf7hgZaWff",
           "platform": "Email",
-          "handle": "koheifoss@gmail.com",
+          "handle": "Send me an email 📩",
           "url": "mailto:lei.fractal.0i@icloud.com"
         }
       ]
