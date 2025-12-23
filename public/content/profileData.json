@@ -9,7 +9,7 @@
     "byline": "Supply Chain Analyst",
     "website": "koheifoss.com",
     "websiteURL": "http://koheifoss.com",
-    "about": "I create business processes that connect people with the data they need to drive operational improvements.",
+    "about": "I use data to make fulfillment easier and faster, helping Samsara's customers keep the world of physical operations safe, efficient, and sustainable.",
     "sectionOrder": [
       "Education",
       "Work Experience",
@@ -117,7 +117,7 @@
       "heading": "Project Management Intern at Starbucks",
       "url": "https://starbucks.com",
       "collaborators": [],
-      "description": "Created an interactive calendar app displaying business rhythms across a 450-person shared services organization.",
+      "description": "Coded an interactive calendar app displaying business rhythms across a 450-person shared services organization.",
       "attachments": [
            {
           "type": "image",
@@ -153,7 +153,7 @@
     {
       "id": "laUsFhLA9l1vK2FLiYP4",
       "year": "2022 — 2023",
-      "heading": "Leadership Development Intern at The Foster School of Business",
+      "heading": "Leadership Development Intern for The Foster School of Business",
       "url": "https://foster.uw.edu/academics/degree-programs/undergraduate-programs/foster-leadership-academy/",
       "collaborators": [],
       "description": "Created this first-of-its-kind internship.\n\nMade changes to curriculum and scheduling that increased the course completion rate by 50% compared to the last cohort.",
@@ -168,7 +168,7 @@
     {
       "id": "Q9U0pxzVDCI5tBEFFZcT",
       "year": "2024 — 2025",
-      "heading": "Senior VP at Delta Sigma Pi",
+      "heading": "Senior Vice President at Delta Sigma Pi",
       "url": "https://www.dspuw.net",
       "collaborators": [],
       "description": "Led recruiting efforts for DSP, a professional fraternity facilitating professional development & community building.",
@@ -181,10 +181,10 @@
     {
       "id": "Nu6oafRqYbnMg4mxOzXl",
       "year": "2023 — 2024",
-      "heading": "Founding Member at UW Product/Project/Program Management Association",
+      "heading": "Cofounder of UW Product/Project/Program Management Association",
       "url": "https://linktr.ee/uwpma",
       "collaborators": [],
-      "description": "Co-founded a community of students interested in careers within product, program, and project management.",
+      "description": "Co-founded a student group interested in careers within product, program, and project management.",
       "attachments": [],
       "type": "Extracurriculars",
       "title": "Founding Member",
@@ -197,7 +197,7 @@
       "heading": "Vice President at Husky Run Club",
       "url": "https://dawgs.run",
       "collaborators": [],
-      "description": "Raised $9000 for UW's recreational distance running club. Also managed spending/fundraising, and record-keeping.",
+      "description": "Led efforts to raise $9000 for UW's run club. Managed spending, fundraising, and record-keeping."
       "attachments": [],
       "type": "Extracurriculars",
       "title": "VP",
@@ -273,11 +273,11 @@
         },
         {
           "id": "xONroaMqjPdHfl01MZrh",
-          "year": "2024 — Now",
+          "year": "2024 — 2025",
           "heading": "Operations Intern at Samsara",
           "url": "https://samsara.com",
           "collaborators": [],
-          "description": "Creating Salesforce and Excel models in service of improving order fulfillment.\n\nPreviously analyzed 20k+ datapoints to reformulate hardware shipping cost calculations for the US/CAN, Mexico, and EMEA regions, saving 200 hours annually.",
+          "description": "Created Salesforce and Excel models in service of improving order fulfillment.\n\nPreviously analyzed 20k+ datapoints to reformulate hardware shipping cost calculations for the US/CAN, Mexico, and EMEA regions, saving 200 hours annually.",
           "attachments": [],
           "type": "workExperience",
           "title": "Operations Intern",
@@ -290,7 +290,7 @@
           "heading": "Project Management Intern at Starbucks",
           "url": "https://starbucks.com",
           "collaborators": [],
-          "description": "Created an interactive calendar app displaying business rhythms across a 450-person shared services organization.",
+          "description": "Coded an interactive calendar app displaying business rhythms across a 450-person shared services organization.",
           "attachments": [
          {
           "type": "image",
@@ -316,7 +316,7 @@
           "heading": "Project Management Intern at Fiveable",
           "url": "https://fiveable.me",
           "collaborators": [],
-          "description": "Standardized support ticketing, resulting in an 85% decrease in average time to resolution.\n\nLed creation of user education that increased month-over-month participation in a cohort-based program by 25%.\n\nCreated a process to audit vendor spend, saving $30k the year it was implemented.\n\nCreated trainings and instructional documents to educate 50+ employees on new project management software.",
+          "description": "Standardized support ticketing, resulting in an 85% decrease in average time to resolution.\n\nLed creation of user education that increased month-over-month participation in a cohort-based program by 25%.\n\nInitiated a vendor spend audit, saving $30k.\n\n Onboarded and wrote docs for 50+ employees on new project management software.",
           "attachments": [],
           "type": "workExperience",
           "title": "Project Management Intern",
@@ -348,20 +348,7 @@
           "url": "https://www.youtube.com/watch?v=FaOrDQsuy8U&feature=youtu.be",
           "collaborators": [],
           "description": "Designed, prototyped, and pitched a CRM app for my introductory informatics class.",
-          "attachments": [
-            {
-              "type": "image",
-              "width": 1920,
-              "height": 1080,
-              "url": "/content/media/inreach-1.png"
-            },
-            {
-              "type": "image",
-              "width": 1920,
-              "height": 1080,
-              "url": "/content/media/inreach-2.png"
-            }
-          ],
+          "attachments": [],
           "type": "sideProject",
           "title": "inreach",
           "company": ""
@@ -373,20 +360,7 @@
           "url": "https://www.youtube.com/watch?v=y6_g4oMOcpw",
           "collaborators": [],
           "description": "Caltech Hacktech Hackathon subission. Led the ideation + design of a mobile app that tracks appliance use for shared households.",
-          "attachments": [
-            {
-              "type": "image",
-              "width": 1920,
-              "height": 1080,
-              "url": "/content/media/Houserules-1.png"
-            },
-            {
-              "type": "image",
-              "width": 1306,
-              "height": 1190,
-              "url": "/content/media/Houserules-2.png"
-            }
-          ],
+          "attachments": [],
           "type": "sideProject",
           "title": "Houserules",
           "company": ""
@@ -398,7 +372,7 @@
       "items": [
         {
           "id": "Q9U0pxzVDCI5tBEFFZcT",
-          "year": "2024 — 2025",
+          "year": "2025",
           "heading": "Vice President at Delta Sigma Pi (Sigma Upsilon Chapter)",
           "url": "https://www.dspuw.net",
           "collaborators": [],
@@ -411,7 +385,7 @@
         },
         {
           "id": "Nu6oafRqYbnMg4mxOzXl",
-          "year": "2023 — 2024",
+          "year": "2024",
           "heading": "Founding Member at UW Project/Product/Program Management Association",
           "url": "https://uwpma.com",
           "collaborators": [],
@@ -424,7 +398,7 @@
         },
         {
           "id": "jy8X1bLthw93edxIjGiH",
-          "year": "2022 — 2023",
+          "year": "2023",
           "heading": "Vice President, Husky Run Club",
           "url": "https://dawgs.run",
           "collaborators": [],
@@ -472,10 +446,10 @@
         {
           "id": "5b2duPc2pOghsH6io9ya",
           "year": "2021 — 2025",
-          "heading": "BA, Business Administration at University of Washington",
-          "url": "http://uw.edu",
+          "heading": "BA, Business at University of Washington",
+          "url": "http://foster.uw.edu",
           "collaborators": [],
-          "description": "Studied abroad in New Zealand for six months and took on a six month co-op internship afterward. \n\nPart of a professional business fraternity and the distance running club.\n\nSometimes went to class, always made time for coffee.",
+          "description": "Took a year off school to travel and work. \n\nLed my professional business fraternity and the distance running club.\n\nSometimes went to class, always made time for coffee.",
           "attachments": [
               {
               "type": "image",
@@ -511,7 +485,7 @@
         {
           "id": "eFX1MCFnsgSf7hgZaWff",
           "platform": "Email",
-          "handle": "Send me an email 📩",
+          "handle": "Say hello 📩",
           "url": "mailto:lei.fractal.0i@icloud.com"
         }
       ]
