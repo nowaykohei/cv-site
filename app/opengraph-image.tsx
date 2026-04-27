@@ -12,7 +12,7 @@ export const size = {
 export const contentType = 'image/png'
 
 export default async function Image() {
-  const imageSrc = await fetch(new URL('../public/content/media/profilePhoto.jpg', import.meta.url)).then(
+  const imageSrc = await fetch(new URL('../public/content/media/IMG_3884.png', import.meta.url)).then(
     (res) => res.arrayBuffer()
   )
 

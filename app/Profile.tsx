@@ -3,12 +3,17 @@ import RichText from "./RichText";
 import Arrow12 from "./Arrow12";
 import styles from "./Profile.module.css";
 import Attachments from "./Attachments";
+import SpeechBubble from "./SpeechBubble";
 
 type ProfileProps = {
   cv: any,
+  splashes?: string[],
+  initialIndex?: number,
 };
 const Profile: React.FC<ProfileProps> = ({
-  cv
+  cv,
+  splashes,
+  initialIndex = 0,
 }) => {
   return (
     <div className={styles.profile}>
@@ -24,12 +29,16 @@ const Profile: React.FC<ProfileProps> = ({
           : null}
         </div>
       </div>
+      {splashes && splashes.length > 0 ?
+        <SpeechBubble splashes={splashes} initialIndex={initialIndex} />
+      : null}
 
       {cv.general.about ?
         <section className={`${styles.profileSection} ${styles.about}`}>
           <h3>About</h3>
           <div className={styles.description}>
             <RichText text={cv.general.about}/>
+            <div><em><a href="/now">Here's what I'm up to now</a>.<span className={styles.linkArrow}>&#xfeff;<Arrow12 fill="var(--grey1)"/></span></em></div>
           </div>
         </section>
       : null}
@@ -97,12 +106,34 @@ const ProfileItem: React.FC<ProfileItemProps> = ({
   )
 }
 
+const EmailIcon = () => (
+  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="1" y="2.5" width="10" height="7" rx="1" stroke="currentColor" strokeWidth="1"/>
+    <path d="M1 4L6 7L11 4" stroke="currentColor" strokeWidth="1"/>
+  </svg>
+);
+
+const LinkedInIcon = () => (
+  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="1" y="1" width="10" height="10" rx="2" fill="currentColor"/>
+    <rect x="2.5" y="4.5" width="1.5" height="5" fill="white"/>
+    <circle cx="3.25" cy="3.25" r="0.75" fill="white"/>
+    <path d="M5.5 4.5H7V5.2C7.3 4.7 7.9 4.4 8.5 4.4C9.6 4.4 10 5.1 10 6.2V9.5H8.5V6.5C8.5 6 8.3 5.7 7.8 5.7C7.3 5.7 7 6 7 6.6V9.5H5.5V4.5Z" fill="white"/>
+  </svg>
+);
+
+const platformIcons: Record<string, React.ReactNode> = {
+  Email: <EmailIcon />,
+  LinkedIn: <LinkedInIcon />,
+};
+
 type ContactItemProps = {
   experience: any,
 };
 const ContactItem: React.FC<ContactItemProps> = ({
   experience
 }) => {
+  const icon = platformIcons[experience.platform];
   return (
     <div className={styles.experience}>
       <div className={styles.year}>
@@ -110,7 +141,9 @@ const ContactItem: React.FC<ContactItemProps> = ({
       </div>
       <div className={styles.experienceContent}>
         <div className={styles.title}>
-          <a href={experience.url} target="_blank">{experience.handle}</a><span className={styles.linkArrow}>&#xfeff;<Arrow12/></span>
+          <span className={styles.contactLink} data-platform={experience.platform}>
+            <a href={experience.url} target="_blank">{experience.handle}</a><span className={styles.linkArrow}>&#xfeff;{icon}<Arrow12 fill="currentColor"/></span>
+          </span>
         </div>
       </div>
     </div>

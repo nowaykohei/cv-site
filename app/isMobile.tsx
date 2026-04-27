@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 
 let isMobileValue: null | boolean = null;
 function isMobile(): boolean {
@@ -17,16 +16,6 @@ function isMobile(): boolean {
     }
   }
   return isMobileValue;
-}
-
-export function useIsMobile(): boolean {
-  const [localMobileValue, setLocalMobileValue] = useState(isMobileValue ?? false);
-
-  useEffect(() => {
-    setLocalMobileValue(isMobile());
-  }, []);
-
-  return localMobileValue;
 }
 
 export default isMobile;

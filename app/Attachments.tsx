@@ -20,7 +20,6 @@ const Attachments: React.FC<AttachmentsProps> = ({
     open: false,
     startingIndex: 0,
   });
-  const scrollRef = useRef<HTMLDivElement>(null);
   const innerRef = useRef<HTMLDivElement>(null);
   const galleryHeight = 90;
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -95,7 +94,7 @@ const Attachments: React.FC<AttachmentsProps> = ({
           </div>
         </div>
       </div>
-      <Scrollbar scrollview={containerRef} innerChild={scrollRef} inlineStyle={{ marginTop: 8 }}/>
+      <Scrollbar scrollview={containerRef} innerChild={innerRef} inlineStyle={{ marginTop: 8 }}/>
       <AnimatePresence>
         {lightbox}
       </AnimatePresence>
