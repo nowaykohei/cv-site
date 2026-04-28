@@ -227,8 +227,9 @@
 }
 
 .footerSignature {
-  width: 50%;
+  width: 25%;
   display: block;
+  opacity: 0.7;
 }
 
 .footerYear {
