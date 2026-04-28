@@ -14,6 +14,16 @@ const PhotoCollage: React.FC<{ photos: any[] }> = ({ photos }) => {
     }), [photos]
   );
 
+  // Fixed per-photo style: alternating tilt direction, slightly varied size
+  const photoStyles = useMemo(() =>
+    sorted.map((_, i) => {
+      const sign = i % 2 === 0 ? 1 : -1;
+      const rotation = sign * (2 + Math.random() * 4); // ±2–6deg, alternating
+      const width = 45 + Math.random() * 10;           // 45–55%
+      return { rotation, width };
+    }), []
+  );
+
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (lightboxIndex !== null) return;
@@ -33,6 +43,10 @@ const PhotoCollage: React.FC<{ photos: any[] }> = ({ photos }) => {
           src={sorted[index].url}
           alt=""
           className={styles.card}
+          style={{
+            width: `${photoStyles[index].width}%`,
+            transform: `rotate(${photoStyles[index].rotation}deg)`,
+          }}
           onClick={() => setLightboxIndex(index)}
         />
       </div>
