@@ -1,13 +1,13 @@
 .collage {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1;
+  height: 220px;
   margin-bottom: 48px;
 }
 
 .photo {
   position: absolute;
-  width: 45%;
+  width: 23%;
   aspect-ratio: 3 / 4;
   object-fit: cover;
   border-radius: 42px;
@@ -15,15 +15,15 @@
 }
 
 .photo[data-index="0"] {
-  left: 2%;
-  top: 8%;
+  left: 5%;
+  top: 12px;
   transform: rotate(-5deg);
   z-index: 2;
 }
 
 .photo[data-index="1"] {
-  left: 44%;
-  top: 22%;
+  left: 62%;
+  top: 28px;
   transform: rotate(6deg);
   z-index: 1;
 }
