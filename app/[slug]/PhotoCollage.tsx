@@ -3,10 +3,19 @@ import { useState, useMemo, useEffect, useRef } from 'react';
 import Lightbox from '../Lightbox';
 import styles from './PhotoCollage.module.css';
 
+// Fan: each depth level rotates more, shifts slightly right
+const FAN = [
+  { rotation: 3,  x: 0  },
+  { rotation: 8,  x: 8  },
+  { rotation: 13, x: 16 },
+];
+
 const PhotoCollage: React.FC<{ photos: any[] }> = ({ photos }) => {
-  const [index, setIndex] = useState(0);
+  const [index, setIndex]         = useState(0);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const [sliding, setSliding]     = useState<'left' | 'right' | null>(null);
   const touchStart = useRef<{ x: number; y: number } | null>(null);
+  const busy = useRef(false);
 
   const sorted = useMemo(() =>
     [...photos].sort((a, b) => {
@@ -15,23 +24,29 @@ const PhotoCollage: React.FC<{ photos: any[] }> = ({ photos }) => {
     }), [photos]
   );
 
-  const photoStyles = useMemo(() =>
-    sorted.map((_, i) => {
-      const sign = i % 2 === 0 ? 1 : -1;
-      const rotation = sign * (2 + Math.random() * 4);
-      return { rotation };
-    }), []
-  );
-
   useEffect(() => {
     sorted.forEach(photo => { new Image().src = photo.url; });
   }, []);
 
+  const navigate = (dir: 'left' | 'right') => {
+    if (busy.current) return;
+    busy.current = true;
+    setSliding(dir);
+    setTimeout(() => {
+      setIndex(i => dir === 'right'
+        ? (i + 1) % sorted.length
+        : (i - 1 + sorted.length) % sorted.length
+      );
+      setSliding(null);
+      busy.current = false;
+    }, 180);
+  };
+
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (lightboxIndex !== null) return;
-      if (e.key === 'ArrowLeft')  setIndex(i => (i - 1 + sorted.length) % sorted.length);
-      if (e.key === 'ArrowRight') setIndex(i => (i + 1) % sorted.length);
+      if (e.key === 'ArrowLeft')  navigate('left');
+      if (e.key === 'ArrowRight') navigate('right');
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
@@ -40,55 +55,58 @@ const PhotoCollage: React.FC<{ photos: any[] }> = ({ photos }) => {
   const onTouchStart = (e: React.TouchEvent) => {
     touchStart.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
   };
-
   const onTouchEnd = (e: React.TouchEvent) => {
     if (!touchStart.current) return;
     const dx = touchStart.current.x - e.changedTouches[0].clientX;
     const dy = Math.abs(touchStart.current.y - e.changedTouches[0].clientY);
     if (Math.abs(dx) > 40 && Math.abs(dx) > dy) {
-      setIndex(i => dx > 0
-        ? (i + 1) % sorted.length
-        : (i - 1 + sorted.length) % sorted.length
-      );
+      navigate(dx > 0 ? 'right' : 'left');
     } else if (Math.abs(dx) < 10 && dy < 10) {
       setLightboxIndex(index);
     }
     touchStart.current = null;
   };
 
-  const attachments = sorted.map(p => ({ type: 'image', ...p }));
   const n = sorted.length;
   const grayCount = Math.min(Math.max(n - 1, 0), 2);
+  const attachments = sorted.map(p => ({ type: 'image', ...p }));
+
+  const slideX = sliding === 'left' ? '-150vw' : sliding === 'right' ? '150vw' : '0px';
 
   return (
     <>
       <div className={styles.collage} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
+
+        {/* Gray fan cards behind */}
         {Array.from({ length: grayCount }, (_, i) => {
           const depth = grayCount - i;
-          const si = (index + 1 + i) % n;
-          const { width, rotation } = photoStyles[si];
+          const fan = FAN[depth] ?? FAN[FAN.length - 1];
           return (
             <div
-              key={`gray-${si}`}
+              key={`gray-${(index + depth) % n}`}
               className={styles.grayCard}
               style={{
-                transform: `translate(-50%, calc(-50% + ${depth * 7}px)) rotate(${rotation}deg)`,
+                transform: `translate(calc(-50% + ${fan.x}px), -50%) rotate(${fan.rotation}deg)`,
                 zIndex: i + 1,
               }}
             />
           );
         })}
+
+        {/* Current photo */}
         <img
           src={sorted[index].url}
           alt=""
           className={styles.card}
           style={{
-            transform: `translate(-50%, -50%) rotate(${photoStyles[index].rotation}deg)`,
+            transform: `translate(calc(-50% + ${slideX}), -50%) rotate(${FAN[0].rotation}deg)`,
+            transition: sliding ? 'transform 0.18s ease-in' : 'none',
             zIndex: grayCount + 1,
           }}
-          onClick={() => setLightboxIndex(index)}
+          onClick={() => { if (!sliding) setLightboxIndex(index); }}
         />
       </div>
+
       {lightboxIndex !== null && (
         <Lightbox
           attachments={attachments}
