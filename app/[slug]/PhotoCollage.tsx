@@ -19,7 +19,7 @@ const PhotoCollage: React.FC<{ photos: any[] }> = ({ photos }) => {
     sorted.map((_, i) => {
       const sign = i % 2 === 0 ? 1 : -1;
       const rotation = sign * (2 + Math.random() * 4);
-      return { rotation, width: 55 };
+      return { rotation };
     }), []
   );
 
@@ -72,7 +72,6 @@ const PhotoCollage: React.FC<{ photos: any[] }> = ({ photos }) => {
               key={`gray-${si}`}
               className={styles.grayCard}
               style={{
-                width: `${width}%`,
                 transform: `translate(-50%, calc(-50% + ${depth * 7}px)) rotate(${rotation}deg)`,
                 zIndex: i + 1,
               }}
@@ -84,7 +83,6 @@ const PhotoCollage: React.FC<{ photos: any[] }> = ({ photos }) => {
           alt=""
           className={styles.card}
           style={{
-            width: `${photoStyles[index].width}%`,
             transform: `translate(-50%, -50%) rotate(${photoStyles[index].rotation}deg)`,
             zIndex: grayCount + 1,
           }}

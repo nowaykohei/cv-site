@@ -9,19 +9,21 @@
   position: absolute;
   left: 50%;
   top: 50%;
+  height: 88%;
+  width: auto;
   aspect-ratio: 3 / 4;
   object-fit: cover;
   border-radius: 24px;
   cursor: pointer;
-  max-height: 100%;
 }
 
 .grayCard {
   position: absolute;
   left: 50%;
   top: 50%;
+  height: 88%;
+  width: auto;
   aspect-ratio: 3 / 4;
   border-radius: 24px;
   background-color: var(--wash2);
-  max-height: 100%;
 }
