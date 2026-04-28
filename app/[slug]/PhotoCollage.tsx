@@ -27,10 +27,12 @@ const PhotoCollage: React.FC<PhotoCollageProps> = ({ photos }) => {
   const photoData = useMemo(() =>
     sorted.map((photo, i) => {
       const base = BASE_POSITIONS[i % BASE_POSITIONS.length];
-      const rotate = (Math.random() - 0.5) * 16;
+      // Same-row photos always tilt opposite directions, with different magnitudes
+      const col = i % 2;
+      const sign = col === 0 ? 1 : -1;
+      const rotate = sign * (4 + Math.random() * 8);
       return {
         ...photo,
-        rotate,
         style: {
           left:    `${base.left + (Math.random() - 0.5) * 6}%`,
           top:     `${base.top  + (Math.random() - 0.5) * 8}%`,
