@@ -24,8 +24,13 @@ const PhotoCollage: React.FC<{ photos: any[] }> = ({ photos }) => {
     }), [photos]
   );
 
+  const imageCache = useRef<HTMLImageElement[]>([]);
   useEffect(() => {
-    sorted.forEach(photo => { new Image().src = photo.url; });
+    imageCache.current = sorted.map(photo => {
+      const img = new Image();
+      img.src = photo.url;
+      return img;
+    });
   }, []);
 
   const navigate = (dir: 'left' | 'right') => {
