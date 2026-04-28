@@ -18,8 +18,7 @@ const PhotoCollage: React.FC<{ photos: any[] }> = ({ photos }) => {
     sorted.map((_, i) => {
       const sign = i % 2 === 0 ? 1 : -1;
       const rotation = sign * (2 + Math.random() * 4);
-      const width = 45 + Math.random() * 10;
-      return { rotation, width };
+      return { rotation, width: 55 };
     }), []
   );
 
