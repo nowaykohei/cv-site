@@ -9,7 +9,7 @@ const inter = Inter({
 })
 
 export async function generateMetadata(): Promise<Metadata> {
-  const file = await fs.readFile(process.cwd() + '/public/content/profileData.json', 'utf8');
+  const file = await fs.readFile(process.cwd() + '/content/profileData.json', 'utf8');
   const cv = JSON.parse(file);
   return {
     title: cv.general.displayName,

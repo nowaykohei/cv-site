@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og'
 import { promises as fs } from 'fs'
 import path from 'path'
-import profileData from '../public/content/profileData.json';
+import profileData from '../content/profileData.json';
 
 export const alt = profileData.general.byline;
 export const size = {

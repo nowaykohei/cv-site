@@ -8,7 +8,7 @@ export default async function CaseStudyPage({
   params: Promise<{ slug: string }>
 }) {
   const slug = (await params).slug;
-  const file = await fs.readFile(process.cwd() + `/public/content/${slug}.md`, 'utf8');
+  const file = await fs.readFile(process.cwd() + `/content/${slug}.md`, 'utf8');
 
   return (
     <div className={styles.page}>
