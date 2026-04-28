@@ -123,19 +123,23 @@
   margin: 2em 0;
 }
 
-.backLink {
-  display: inline-flex;
+.backButton {
+  position: fixed;
+  top: 20px;
+  right: 60px;
+  width: 28px;
+  height: 28px;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  border: 1px solid var(--wash1);
+  border-radius: 6px;
   color: var(--grey3);
-  font-size: 13px;
-  margin-top: 48px;
+  font-size: 14px;
+  z-index: 100;
 }
 
-.backLink:hover {
+.backButton:hover {
   color: var(--grey1);
-}
-
-.backArrow {
-  white-space: nowrap;
-  margin-left: 2px;
+  border-color: var(--grey3);
 }

@@ -1,5 +1,4 @@
 import RichText from "../RichText";
-import Arrow12 from "../Arrow12";
 import PhotoCollage from "./PhotoCollage";
 import GlobeSpinner from "./GlobeSpinner";
 import Footer from "../Footer";
@@ -22,8 +21,8 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
         koheifoss.com/{slug}
       </h1>
       {photos.length > 0 && <PhotoCollage photos={photos} />}
+      <a href="/" className={styles.backButton}>{'<'}</a>
       <div className={styles.markdown}><RichText text={markdownText} /></div>
-      <a href="/" className={styles.backLink}>kohei foss<span className={styles.backArrow}>&#xfeff;<Arrow12 fill="var(--grey3)"/></span></a>
       <Footer />
     </div>
   );
