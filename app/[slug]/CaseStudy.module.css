@@ -101,6 +101,9 @@
   font-weight: 400;
   color: var(--grey3);
   margin-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .markdown img {
