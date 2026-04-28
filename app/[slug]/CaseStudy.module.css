@@ -137,26 +137,41 @@
 
 .backButton {
   position: fixed;
-  top: 20px;
-  right: 20px;
-  width: 28px;
-  height: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid var(--wash1);
-  border-bottom: 1px solid var(--wash1);
-  border-radius: 6px;
-  color: var(--grey3);
-  font-size: 14px;
+  top: 12px;
+  right: 12px;
+  width: 24px;
+  height: 24px;
+  border-radius: 16px;
+  border: none;
+  background-color: var(--wash2);
   z-index: 100;
   flex-shrink: 0;
+  cursor: pointer;
 }
 
-.backButton:hover {
-  color: var(--grey1);
-  border-color: var(--grey3);
-  border-bottom-color: var(--grey3);
+.backButton::after,
+.backButton::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 11px;
+  background-color: var(--grey3);
+  left: 50%;
+  top: 50%;
+  border-radius: 1px;
+}
+
+.backButton::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.backButton::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.backButton:hover::after,
+.backButton:hover::before {
+  background-color: var(--grey1);
 }
 
 @media (max-width: 580px) {
@@ -167,6 +182,6 @@
   }
 
   .backButton {
-    position: static;
+    position: fixed;
   }
 }

@@ -21,7 +21,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
           {slug === "now" && <span className={styles.pageTitleGlobe}><GlobeSpinner /></span>}
           koheifoss.com/{slug}
         </h1>
-        <a href="/" className={styles.backButton}>{'<'}</a>
+        <a href="/" className={styles.backButton}></a>
       </div>
       {photos.length > 0 && <PhotoCollage photos={photos} />}
       <div className={styles.markdown}><RichText text={markdownText} /></div>
