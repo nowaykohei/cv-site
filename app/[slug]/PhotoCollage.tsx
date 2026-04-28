@@ -76,7 +76,8 @@ const PhotoCollage: React.FC<{ photos: any[] }> = ({ photos }) => {
   const grayCount = Math.min(Math.max(n - 1, 0), 2);
   const attachments = sorted.map(p => ({ type: 'image', ...p }));
 
-  const slideX = sliding === 'left' ? '-150vw' : sliding === 'right' ? '150vw' : '0px';
+  const slideX = sliding === 'left' ? '-120px' : sliding === 'right' ? '120px' : '0px';
+  const slideOpacity = sliding ? 0 : 1;
 
   return (
     <>
@@ -106,7 +107,8 @@ const PhotoCollage: React.FC<{ photos: any[] }> = ({ photos }) => {
           className={styles.card}
           style={{
             transform: `translate(calc(-50% + ${slideX}), -50%) rotate(${FAN[0].rotation}deg)`,
-            transition: sliding ? 'transform 0.18s ease-in' : 'none',
+            opacity: slideOpacity,
+            transition: sliding ? 'transform 0.36s ease-in, opacity 0.36s ease-in' : 'none',
             zIndex: grayCount + 1,
           }}
           onClick={() => { if (!sliding) setLightboxIndex(index); }}
