@@ -1,11 +1,12 @@
 'use client';
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, useRef } from 'react';
 import Lightbox from '../Lightbox';
 import styles from './PhotoCollage.module.css';
 
 const PhotoCollage: React.FC<{ photos: any[] }> = ({ photos }) => {
   const [index, setIndex] = useState(0);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const touchStart = useRef<{ x: number; y: number } | null>(null);
 
   const sorted = useMemo(() =>
     [...photos].sort((a, b) => {
@@ -23,10 +24,7 @@ const PhotoCollage: React.FC<{ photos: any[] }> = ({ photos }) => {
   );
 
   useEffect(() => {
-    sorted.forEach(photo => {
-      const img = new Image();
-      img.src = photo.url;
-    });
+    sorted.forEach(photo => { new Image().src = photo.url; });
   }, []);
 
   useEffect(() => {
@@ -39,61 +37,56 @@ const PhotoCollage: React.FC<{ photos: any[] }> = ({ photos }) => {
     return () => window.removeEventListener('keydown', onKey);
   }, [lightboxIndex, sorted.length]);
 
+  const onTouchStart = (e: React.TouchEvent) => {
+    touchStart.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+  };
+
+  const onTouchEnd = (e: React.TouchEvent) => {
+    if (!touchStart.current) return;
+    const dx = touchStart.current.x - e.changedTouches[0].clientX;
+    const dy = Math.abs(touchStart.current.y - e.changedTouches[0].clientY);
+    if (Math.abs(dx) > 40 && Math.abs(dx) > dy) {
+      setIndex(i => dx > 0
+        ? (i + 1) % sorted.length
+        : (i - 1 + sorted.length) % sorted.length
+      );
+    } else if (Math.abs(dx) < 10 && dy < 10) {
+      setLightboxIndex(index);
+    }
+    touchStart.current = null;
+  };
+
   const attachments = sorted.map(p => ({ type: 'image', ...p }));
   const n = sorted.length;
-
-  // Build stack from bottom to top: gray cards → next photo → current photo
-  const grayCount = Math.min(Math.max(n - 2, 0), 2);
-  const grayCards = Array.from({ length: grayCount }, (_, i) => {
-    const depth = grayCount - i; // deeper = rendered first (lower z)
-    const si = (index + 2 + i) % n;
-    const { width, rotation } = photoStyles[si];
-    return (
-      <div
-        key={`gray-${si}`}
-        className={styles.grayCard}
-        style={{
-          width: `${width}%`,
-          transform: `translate(-50%, calc(-50% + ${depth * 7}px)) rotate(${rotation}deg)`,
-          zIndex: i + 1,
-        }}
-      />
-    );
-  });
-
-  const nextIdx = (index + 1) % n;
-  const { width: nw, rotation: nr } = photoStyles[nextIdx];
-  const { width: cw, rotation: cr } = photoStyles[index];
+  const grayCount = Math.min(Math.max(n - 1, 0), 2);
 
   return (
     <>
-      <div className={styles.collage}>
-        {grayCards}
-
-        {/* Next photo at 80% opacity */}
+      <div className={styles.collage} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
+        {Array.from({ length: grayCount }, (_, i) => {
+          const depth = grayCount - i;
+          const si = (index + 1 + i) % n;
+          const { width, rotation } = photoStyles[si];
+          return (
+            <div
+              key={`gray-${si}`}
+              className={styles.grayCard}
+              style={{
+                width: `${width}%`,
+                transform: `translate(-50%, calc(-50% + ${depth * 7}px)) rotate(${rotation}deg)`,
+                zIndex: i + 1,
+              }}
+            />
+          );
+        })}
         <img
-          key={`next-${nextIdx}`}
-          src={sorted[nextIdx].url}
-          alt=""
-          className={styles.card}
-          style={{
-            width: `${nw}%`,
-            transform: `translate(-50%, calc(-50% + 7px)) rotate(${nr}deg)`,
-            opacity: 0.8,
-            zIndex: grayCount + 1,
-          }}
-        />
-
-        {/* Current photo */}
-        <img
-          key={`current-${index}`}
           src={sorted[index].url}
           alt=""
           className={styles.card}
           style={{
-            width: `${cw}%`,
-            transform: `translate(-50%, -50%) rotate(${cr}deg)`,
-            zIndex: grayCount + 2,
+            width: `${photoStyles[index].width}%`,
+            transform: `translate(-50%, -50%) rotate(${photoStyles[index].rotation}deg)`,
+            zIndex: grayCount + 1,
           }}
           onClick={() => setLightboxIndex(index)}
         />
