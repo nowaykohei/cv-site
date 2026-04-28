@@ -24,6 +24,13 @@ const PhotoCollage: React.FC<{ photos: any[] }> = ({ photos }) => {
   );
 
   useEffect(() => {
+    sorted.forEach(photo => {
+      const img = new Image();
+      img.src = photo.url;
+    });
+  }, []);
+
+  useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (lightboxIndex !== null) return;
       if (e.key === 'ArrowLeft')  setIndex(i => (i - 1 + sorted.length) % sorted.length);
