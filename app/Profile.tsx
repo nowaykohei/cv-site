@@ -66,7 +66,7 @@ const Profile: React.FC<ProfileProps> = ({
       <footer className={styles.footer}>
         <hr className={styles.footerRule} />
         <img src="/kohei-cursive.png" alt="Kohei" className={styles.footerSignature} />
-        <p className={styles.footerYear}>Published 2026</p>
+        <p className={styles.footerYear}>Published 2021. Updated {new Date(process.env.BUILD_DATE ?? Date.now()).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}.</p>
       </footer>
     </div>
   );
@@ -112,26 +112,6 @@ const ProfileItem: React.FC<ProfileItemProps> = ({
   )
 }
 
-const EmailIcon = () => (
-  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="1" y="2.5" width="10" height="7" rx="1" stroke="currentColor" strokeWidth="1"/>
-    <path d="M1 4L6 7L11 4" stroke="currentColor" strokeWidth="1"/>
-  </svg>
-);
-
-const LinkedInIcon = () => (
-  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="1" y="1" width="10" height="10" rx="2" fill="currentColor"/>
-    <rect x="2.5" y="4.5" width="1.5" height="5" fill="white"/>
-    <circle cx="3.25" cy="3.25" r="0.75" fill="white"/>
-    <path d="M5.5 4.5H7V5.2C7.3 4.7 7.9 4.4 8.5 4.4C9.6 4.4 10 5.1 10 6.2V9.5H8.5V6.5C8.5 6 8.3 5.7 7.8 5.7C7.3 5.7 7 6 7 6.6V9.5H5.5V4.5Z" fill="white"/>
-  </svg>
-);
-
-const platformIcons: Record<string, React.ReactNode> = {
-  Email: <EmailIcon />,
-  LinkedIn: <LinkedInIcon />,
-};
 
 type ContactItemProps = {
   experience: any,
@@ -139,7 +119,6 @@ type ContactItemProps = {
 const ContactItem: React.FC<ContactItemProps> = ({
   experience
 }) => {
-  const icon = platformIcons[experience.platform];
   return (
     <div className={styles.experience}>
       <div className={styles.year}>
@@ -148,7 +127,7 @@ const ContactItem: React.FC<ContactItemProps> = ({
       <div className={styles.experienceContent}>
         <div className={styles.title}>
           <span className={styles.contactLink} data-platform={experience.platform}>
-            <a href={experience.url} target="_blank">{experience.handle}</a><span className={styles.linkArrow}>&#xfeff;{icon}<Arrow12 fill="currentColor"/></span>
+            <a href={experience.url} target="_blank">{experience.handle}</a><span className={styles.linkArrow}>&#xfeff;<Arrow12 fill="currentColor"/></span>
           </span>
         </div>
       </div>
