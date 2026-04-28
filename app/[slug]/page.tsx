@@ -10,9 +10,15 @@ export default async function CaseStudyPage({
   const slug = (await params).slug;
   const file = await fs.readFile(process.cwd() + `/content/${slug}.md`, 'utf8');
 
+  let photos: string[] = [];
+  try {
+    const photosRaw = await fs.readFile(process.cwd() + `/content/${slug}.photos.json`, 'utf8');
+    photos = JSON.parse(photosRaw);
+  } catch {}
+
   return (
     <div className={styles.page}>
-      <CaseStudy markdownText={file} />
+      <CaseStudy slug={slug} markdownText={file} photos={photos} />
     </div>
   );
 }

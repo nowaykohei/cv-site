@@ -1,15 +1,22 @@
 import RichText from "../RichText";
 import Arrow12 from "../Arrow12";
+import PhotoCollage from "./PhotoCollage";
 import styles from "./CaseStudy.module.css";
 
 type CaseStudyProps = {
-  markdownText: string,
+  slug: string;
+  markdownText: string;
+  photos: string[];
 };
 const CaseStudy: React.FC<CaseStudyProps> = ({
+  slug,
   markdownText,
+  photos,
 }) => {
   return (
     <div className={styles.content}>
+      <h1 className={styles.pageTitle}>koheifoss.com/{slug}</h1>
+      {photos.length > 0 && <PhotoCollage photos={photos} />}
       <RichText text={markdownText} />
       <a href="/" className={styles.backLink}>kohei foss<span className={styles.backArrow}>&#xfeff;<Arrow12 fill="var(--grey3)"/></span></a>
     </div>

@@ -96,6 +96,13 @@
   color: var(--grey2);
 }
 
+.pageTitle {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--grey3);
+  margin-bottom: 32px;
+}
+
 .content img {
   width: 100%;
   border-radius: 42px;

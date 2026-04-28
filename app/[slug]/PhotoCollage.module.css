@@ -1,0 +1,28 @@
+.collage {
+  position: relative;
+  height: 240px;
+  margin-bottom: 48px;
+}
+
+.photo {
+  position: absolute;
+  width: 48%;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 42px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.photo[data-index="0"] {
+  left: 0;
+  top: 0;
+  transform: rotate(-4deg);
+  z-index: 2;
+}
+
+.photo[data-index="1"] {
+  left: 30%;
+  top: 24px;
+  transform: rotate(5deg);
+  z-index: 1;
+}

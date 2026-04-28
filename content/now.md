@@ -1,5 +1,3 @@
-![me](/content/media/now-photo.png)
-
 ### Work
 
 At Samsara I'm learning all about what it takes to transport and manufacture electronics, and using generative AI to build helpful tools for myself and my team.
