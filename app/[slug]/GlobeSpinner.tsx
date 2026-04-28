@@ -11,8 +11,7 @@ export default function GlobeSpinner() {
       onMouseEnter={() => setTooltipOpen(true)}
       onMouseLeave={() => setTooltipOpen(false)}
     >
-      <img src="/globe/day-globe.gif" alt="" className={`${styles.globe} ${styles.dayGlobe}`} />
-      <img src="/globe/night-globe.gif" alt="" className={`${styles.globe} ${styles.nightGlobe}`} />
+      <img src="/globe/day-globe.apng" alt="" className={styles.globe} />
       <span className={`${styles.tooltip} ${tooltipOpen ? styles.tooltipVisible : ""}`}>
         world famous!
       </span>
