@@ -23,7 +23,10 @@ const Profile: React.FC<ProfileProps> = ({
           <Image src={cv.general.profilePhoto} alt="" width={92} height={92} />
         </div>
         <div className={styles.profileInfo}>
-          <h1>{cv.general.displayName}</h1>
+          <h1>{(() => {
+            const m = cv.general.displayName.match(/^(.*?)(\s*\(.*\))$/);
+            return m ? <>{m[1]}<span style={{ opacity: 0.7 }}>{m[2]}</span></> : cv.general.displayName;
+          })()}</h1>
           <div className={styles.byline}>{cv.general.byline}</div>
           {cv.general.website ?
             <a className={styles.website}>{cv.general.website}</a>
