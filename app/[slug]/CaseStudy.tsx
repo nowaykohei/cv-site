@@ -17,8 +17,8 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
   return (
     <div className={styles.content}>
       <h1 className={styles.pageTitle}>
-        <span>koheifoss.com/{slug}</span>
-        {slug === "now" && <GlobeSpinner />}
+        {slug === "now" && <span className={styles.pageTitleGlobe}><GlobeSpinner /></span>}
+        koheifoss.com/{slug}
       </h1>
       {photos.length > 0 && <PhotoCollage photos={photos} />}
       <div className={styles.markdown}><RichText text={markdownText} /></div>
