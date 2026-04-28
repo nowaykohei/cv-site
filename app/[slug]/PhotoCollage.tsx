@@ -82,7 +82,16 @@ const PhotoCollage: React.FC<{ photos: any[] }> = ({ photos }) => {
                 key={photo.url}
                 src={photo.url}
                 className={styles.card}
-                custom={exitDir}
+                variants={{
+                  exit: (dir: 'left' | 'right') => ({
+                    x:       isTop ? (dir === 'left' ? -80 : 80) : 0,
+                    opacity: 0,
+                    rotate:  isTop
+                      ? photo.rotation + (dir === 'left' ? -14 : 14)
+                      : photo.rotation,
+                    transition: { type: 'spring', stiffness: 300, damping: 30 },
+                  }),
+                }}
                 animate={{
                   opacity: OPACITIES[depth],
                   rotate:  photo.rotation,
@@ -90,14 +99,7 @@ const PhotoCollage: React.FC<{ photos: any[] }> = ({ photos }) => {
                   scale:   SCALES[depth],
                   zIndex:  STACK_DEPTH - depth,
                 }}
-                exit={(dir: 'left' | 'right') => ({
-                  x:       isTop ? (dir === 'left' ? '-130%' : '130%') : 0,
-                  opacity: 0,
-                  rotate:  isTop
-                    ? photo.rotation + (dir === 'left' ? -10 : 10)
-                    : photo.rotation,
-                  transition: { type: 'spring', stiffness: 300, damping: 30 },
-                })}
+                exit="exit"
                 transition={{ type: 'spring', stiffness: 200, damping: 26 }}
                 style={{ cursor: isTop ? 'pointer' : 'default' }}
                 onClick={isTop ? () => setLightboxIndex(sorted.findIndex(p => p.url === photo.url)) : undefined}
