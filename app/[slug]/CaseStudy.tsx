@@ -16,12 +16,14 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
 }) => {
   return (
     <div className={styles.content}>
-      <h1 className={styles.pageTitle}>
-        {slug === "now" && <span className={styles.pageTitleGlobe}><GlobeSpinner /></span>}
-        koheifoss.com/{slug}
-      </h1>
+      <div className={styles.pageTitleRow}>
+        <h1 className={styles.pageTitle}>
+          {slug === "now" && <span className={styles.pageTitleGlobe}><GlobeSpinner /></span>}
+          koheifoss.com/{slug}
+        </h1>
+        <a href="/" className={styles.backButton}>{'<'}</a>
+      </div>
       {photos.length > 0 && <PhotoCollage photos={photos} />}
-      <a href="/" className={styles.backButton}>{'<'}</a>
       <div className={styles.markdown}><RichText text={markdownText} /></div>
       <Footer />
     </div>
