@@ -60,7 +60,7 @@ const PhotoCollage: React.FC<{ photos: any[] }> = ({ photos }) => {
     const dx = touchStart.current.x - e.changedTouches[0].clientX;
     const dy = Math.abs(touchStart.current.y - e.changedTouches[0].clientY);
     if (Math.abs(dx) > 40 && Math.abs(dx) > dy) {
-      navigate(dx > 0 ? 'right' : 'left');
+      navigate(dx > 0 ? 'left' : 'right');
     } else if (Math.abs(dx) < 10 && dy < 10) {
       setLightboxIndex(index);
     }
@@ -95,6 +95,7 @@ const PhotoCollage: React.FC<{ photos: any[] }> = ({ photos }) => {
 
         {/* Current photo */}
         <img
+          key={index}
           src={sorted[index].url}
           alt=""
           className={styles.card}
