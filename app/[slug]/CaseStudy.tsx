@@ -17,7 +17,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
     <div className={styles.content}>
       <h1 className={styles.pageTitle}>koheifoss.com/{slug}</h1>
       {photos.length > 0 && <PhotoCollage photos={photos} />}
-      <RichText text={markdownText} />
+      <div className={styles.markdown}><RichText text={markdownText} /></div>
       <a href="/" className={styles.backLink}>kohei foss<span className={styles.backArrow}>&#xfeff;<Arrow12 fill="var(--grey3)"/></span></a>
     </div>
   );
