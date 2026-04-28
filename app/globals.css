@@ -11,7 +11,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --background: #222;
     --grey1: #eee;
     --grey2: #bbb;
@@ -20,6 +20,16 @@
     --wash2: #383838;
     --transparentBorder: rgb(255 255 255 / 0.1);
   }
+}
+
+[data-theme="dark"] {
+  --background: #222;
+  --grey1: #eee;
+  --grey2: #bbb;
+  --grey3: #888;
+  --wash1: #4E4E4E;
+  --wash2: #383838;
+  --transparentBorder: rgb(255 255 255 / 0.1);
 }
 
 * {
@@ -50,7 +60,11 @@ a {
 }
 
 @media (prefers-color-scheme: dark) {
-  html {
+  html:not([data-theme="light"]) {
     color-scheme: dark;
   }
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
 }

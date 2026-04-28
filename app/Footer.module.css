@@ -15,6 +15,19 @@
   opacity: 0.7;
 }
 
+.footerSignatureDark {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .footerSignatureLight { display: none; }
+  html:not([data-theme="light"]) .footerSignatureDark { display: block; }
+}
+
+[data-theme="dark"] .footerSignatureLight { display: none; }
+[data-theme="dark"] .footerSignatureDark { display: block; }
+[data-theme="light"] .footerSignatureDark { display: none; }
+
 .footerYear {
   font-size: 12px;
   color: var(--grey3);

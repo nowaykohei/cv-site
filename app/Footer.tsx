@@ -7,7 +7,8 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <hr className={styles.footerRule} />
-      <img src="/kohei-cursive.png" alt="Kohei" className={styles.footerSignature} />
+      <img src="/kohei-cursive.png" alt="Kohei" className={`${styles.footerSignature} ${styles.footerSignatureLight}`} />
+      <img src="/kohei-cursive-dark.png" alt="Kohei" className={`${styles.footerSignature} ${styles.footerSignatureDark}`} />
       <p className={styles.footerYear}>Published 2021. Updated {updated}.</p>
     </footer>
   );

@@ -1,0 +1,16 @@
+.toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  line-height: 1;
+  z-index: 100;
+  opacity: 0.5;
+}
+
+.toggle:hover {
+  opacity: 1;
+}
