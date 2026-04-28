@@ -44,7 +44,7 @@ const PhotoCollage: React.FC<{ photos: any[] }> = ({ photos }) => {
       );
       setSliding(null);
       busy.current = false;
-    }, 180);
+    }, 360);
   };
 
   useEffect(() => {
