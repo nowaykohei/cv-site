@@ -24,6 +24,6 @@
   transform: rotate(6deg);
   transform-origin: bottom center;
   align-self: flex-end;
-  margin-left: -120px;
+  margin-left: -200px;
   z-index: 1;
 }
