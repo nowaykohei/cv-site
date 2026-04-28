@@ -24,9 +24,12 @@ export default function ThemeToggle() {
   if (theme === null) return null;
 
   return (
-    <button onClick={toggle} className={styles.switch} aria-label="Toggle theme">
-      <span className={theme === "light" ? styles.active : ""}>I</span>
-      <span className={theme === "dark" ? styles.active : ""}>O</span>
+    <button
+      onClick={toggle}
+      className={`${styles.toggle} ${theme === "light" ? styles.on : ""}`}
+      aria-label="Toggle theme"
+    >
+      <span className={styles.thumb} />
     </button>
   );
 }
