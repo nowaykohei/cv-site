@@ -29,7 +29,6 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: `(function(){var t=localStorage.getItem('theme');if(t){document.documentElement.dataset.theme=t;}else if(window.matchMedia('(prefers-color-scheme: dark)').matches){document.documentElement.dataset.theme='dark';}else{document.documentElement.dataset.theme='light';}})();` }} />
       </head>
       <body className={`${inter.variable} font-sans`}>
-        <ThemeToggle />
         {children}
       </body>
     </html>

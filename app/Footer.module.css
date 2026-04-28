@@ -28,8 +28,14 @@
 [data-theme="dark"] .footerSignatureDark { display: block; }
 [data-theme="light"] .footerSignatureDark { display: none; }
 
+.footerBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
 .footerYear {
   font-size: 12px;
   color: var(--grey3);
-  margin-top: 12px;
 }

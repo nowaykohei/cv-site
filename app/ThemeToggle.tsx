@@ -24,10 +24,9 @@ export default function ThemeToggle() {
   if (theme === null) return null;
 
   return (
-    <button onClick={toggle} className={styles.toggle} aria-label="Toggle theme">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="20" height="20">
-        <text y=".9em" fontSize="90">{theme === "dark" ? "☀️" : "🌙"}</text>
-      </svg>
+    <button onClick={toggle} className={styles.switch} aria-label="Toggle theme">
+      <span className={theme === "light" ? styles.active : ""}>I</span>
+      <span className={theme === "dark" ? styles.active : ""}>O</span>
     </button>
   );
 }

@@ -110,6 +110,14 @@
   top: 0;
 }
 
+@media (max-width: 580px) {
+  .pageTitleGlobe {
+    position: static;
+    display: inline;
+    margin-right: 4px;
+  }
+}
+
 .markdown img {
   width: 100%;
   border-radius: 42px;
