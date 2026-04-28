@@ -29,7 +29,9 @@ export default function ThemeToggle() {
       className={`${styles.toggle} ${theme === "light" ? styles.on : ""}`}
       aria-label="Toggle theme"
     >
+      <span className={styles.labelI}>I</span>
       <span className={styles.thumb} />
+      <span className={styles.labelO}>O</span>
     </button>
   );
 }

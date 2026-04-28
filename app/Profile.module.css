@@ -184,6 +184,10 @@
   border-bottom: 1px solid;
 }
 
+.contacts .title a:hover {
+  border-bottom: 1px solid var(--wash1);
+}
+
 .linkArrow {
   white-space: nowrap;
   margin-left: 4px;
@@ -197,15 +201,6 @@
   display: inline;
 }
 
-.contactLink[data-platform="Email"]:hover,
-.contactLink[data-platform="Email"]:hover a {
-  color: #cc0000;
-}
-
-.contactLink[data-platform="LinkedIn"]:hover,
-.contactLink[data-platform="LinkedIn"]:hover a {
-  color: #0077b5;
-}
 
 .location {
   color: var(--grey2);
