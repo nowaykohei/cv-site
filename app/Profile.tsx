@@ -62,6 +62,12 @@ const Profile: React.FC<ProfileProps> = ({
           </section>
         )
       })}
+
+      <footer className={styles.footer}>
+        <hr className={styles.footerRule} />
+        <img src="/kohei-cursive.png" alt="Kohei" className={styles.footerSignature} />
+        <p className={styles.footerYear}>Published 2026</p>
+      </footer>
     </div>
   );
 };

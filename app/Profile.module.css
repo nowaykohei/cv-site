@@ -215,6 +215,28 @@
   margin-top: calc((var(--font-size) * var(--line-height)) / 2);
 }
 
+.footer {
+  margin-top: 60px;
+  padding-bottom: 48px;
+}
+
+.footerRule {
+  border: none;
+  border-top: 1px solid var(--wash1);
+  margin-bottom: 32px;
+}
+
+.footerSignature {
+  width: 50%;
+  display: block;
+}
+
+.footerYear {
+  font-size: 12px;
+  color: var(--grey3);
+  margin-top: 12px;
+}
+
 @media (max-width: 480px) {
   
   .about .description,
