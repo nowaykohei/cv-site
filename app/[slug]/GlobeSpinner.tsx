@@ -1,17 +1,21 @@
 "use client";
-import { useState, useEffect } from "react";
-
-const GLOBES = ["🌎", "🌍", "🌏"];
+import { useState } from "react";
+import styles from "./GlobeSpinner.module.css";
 
 export default function GlobeSpinner() {
-  const [index, setIndex] = useState(0);
+  const [tooltipOpen, setTooltipOpen] = useState(false);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex(i => (i + 1) % GLOBES.length);
-    }, 600);
-    return () => clearInterval(interval);
-  }, []);
-
-  return <span aria-hidden="true">{GLOBES[index]}</span>;
+  return (
+    <span
+      className={styles.wrapper}
+      onMouseEnter={() => setTooltipOpen(true)}
+      onMouseLeave={() => setTooltipOpen(false)}
+    >
+      <img src="/globe/day-globe.gif" alt="" className={`${styles.globe} ${styles.dayGlobe}`} />
+      <img src="/globe/night-globe.gif" alt="" className={`${styles.globe} ${styles.nightGlobe}`} />
+      <span className={`${styles.tooltip} ${tooltipOpen ? styles.tooltipVisible : ""}`}>
+        world famous!
+      </span>
+    </span>
+  );
 }

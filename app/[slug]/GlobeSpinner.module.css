@@ -1,0 +1,37 @@
+.wrapper {
+  position: relative;
+  display: inline-block;
+  cursor: default;
+}
+
+.globe {
+  height: 1.2em;
+  width: auto;
+  display: block;
+}
+
+.dayGlobe { display: block; }
+.nightGlobe { display: none; }
+
+:global([data-theme="dark"]) .dayGlobe { display: none; }
+:global([data-theme="dark"]) .nightGlobe { display: block; }
+
+.tooltip {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  white-space: nowrap;
+  background: var(--grey1);
+  color: var(--background);
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 6px 10px;
+  border-radius: 8px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.tooltipVisible {
+  opacity: 1;
+}
