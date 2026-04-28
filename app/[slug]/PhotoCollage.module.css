@@ -1,6 +1,6 @@
 .collage {
   width: 100%;
-  height: 420px;
+  height: 400px;
   margin-bottom: 32px;
   position: relative;
   overflow: hidden;
@@ -10,29 +10,31 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 55%;
+  width: 52%;
   aspect-ratio: 3 / 4;
   object-fit: cover;
   border-radius: 24px;
   cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
 .grayCard {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 55%;
+  width: 52%;
   aspect-ratio: 3 / 4;
   border-radius: 24px;
-  background-color: var(--wash2);
+  background-color: var(--wash1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
 }
 
 @media (max-width: 580px) {
   .collage {
-    height: 480px;
+    height: 456px;
   }
   .card,
   .grayCard {
-    width: 68%;
+    width: 65%;
   }
 }
