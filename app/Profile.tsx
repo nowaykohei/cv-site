@@ -4,6 +4,7 @@ import Arrow12 from "./Arrow12";
 import styles from "./Profile.module.css";
 import Attachments from "./Attachments";
 import SpeechBubble from "./SpeechBubble";
+import Footer from "./Footer";
 
 type ProfileProps = {
   cv: any,
@@ -63,11 +64,7 @@ const Profile: React.FC<ProfileProps> = ({
         )
       })}
 
-      <footer className={styles.footer}>
-        <hr className={styles.footerRule} />
-        <img src="/kohei-cursive.png" alt="Kohei" className={styles.footerSignature} />
-        <p className={styles.footerYear}>Published 2021. Updated {new Date(process.env.BUILD_DATE ?? Date.now()).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}.</p>
-      </footer>
+      <Footer />
     </div>
   );
 };
