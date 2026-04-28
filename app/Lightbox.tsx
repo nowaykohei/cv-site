@@ -146,8 +146,8 @@ const Lightbox: React.FC<LightboxProps> = ({
         }}
         transition={{
           type: 'spring',
-          stiffness: 700,
-          damping: 50,
+          stiffness: 260,
+          damping: 28,
         }}
         className={styles.backdrop}
         onClick={() => close()}/>
@@ -164,8 +164,8 @@ const Lightbox: React.FC<LightboxProps> = ({
         whileTap={{ scale: 0.9 }}
         transition={{
           type: 'spring',
-          stiffness: 700,
-          damping: 50,
+          stiffness: 260,
+          damping: 28,
         }}
         className={styles.close}
         onClick={() => close()}/>
@@ -186,6 +186,8 @@ const LightboxImage: React.FC<LightboxImageProps> = ({
   display,
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [showCaption, setShowCaption] = useState(false);
+  const hasCaption = !!(media.caption || media.date);
   const [containerAspectRatio, setContainerAspectRatio] = useState((window.innerWidth - 48) / (window.innerHeight - 96));
   const imageAspectRatio = media.width / media.height;
   
@@ -228,8 +230,8 @@ const LightboxImage: React.FC<LightboxImageProps> = ({
         exit={{ opacity: 0, scale: 0.98 }}
         transition={{
           type: 'spring',
-          stiffness: 700,
-          damping: 50,
+          stiffness: 260,
+          damping: 28,
         }}
         ref={containerRef}
         className={styles.lightboxInner}>
@@ -250,6 +252,19 @@ const LightboxImage: React.FC<LightboxImageProps> = ({
             </div>
           : null}
           {attachment}
+          {hasCaption && (!isMobile() || showCaption) && (
+            <div className={styles.captionOverlay}>
+              {media.date && <span className={styles.captionDate}>{media.date}</span>}
+              {media.caption && <span className={styles.captionText}>{media.caption}</span>}
+            </div>
+          )}
+          {hasCaption && isMobile() && (
+            <button
+              className={styles.infoButton}
+              data-active={showCaption}
+              onClick={(e) => { e.stopPropagation(); setShowCaption(s => !s); }}
+            >i</button>
+          )}
         </div>
       </motion.div>
     </div>

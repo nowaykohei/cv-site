@@ -7,7 +7,7 @@ import styles from "./CaseStudy.module.css";
 type CaseStudyProps = {
   slug: string;
   markdownText: string;
-  photos: string[];
+  photos: any[];
 };
 const CaseStudy: React.FC<CaseStudyProps> = ({
   slug,

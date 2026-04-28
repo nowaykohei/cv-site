@@ -10,7 +10,7 @@ export default async function CaseStudyPage({
   const slug = (await params).slug;
   const file = await fs.readFile(process.cwd() + `/content/${slug}.md`, 'utf8');
 
-  let photos: string[] = [];
+  let photos: any[] = [];
   try {
     const photosRaw = await fs.readFile(process.cwd() + `/content/${slug}.photos.json`, 'utf8');
     photos = JSON.parse(photosRaw);
