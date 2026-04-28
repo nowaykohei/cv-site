@@ -2,12 +2,12 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 16px 0 32px;
+  padding: 16px 5% 32px;
   margin-bottom: 32px;
 }
 
 .photo {
-  width: 23%;
+  width: 17%;
   aspect-ratio: 3 / 4;
   object-fit: cover;
   border-radius: 42px;
