@@ -1,31 +1,23 @@
 .collage {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 16px 5% 32px;
-  margin-bottom: 32px;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin-bottom: 48px;
+  overflow: visible;
 }
 
 .photo {
-  width: 48%;
+  position: absolute;
   aspect-ratio: 3 / 4;
   object-fit: cover;
-  border-radius: 42px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
-  flex-shrink: 0;
+  border-radius: 24px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.14);
   cursor: pointer;
+  transform: rotate(var(--rotate));
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.photo[data-index="0"] {
-  transform: rotate(-5deg);
-  transform-origin: bottom center;
-}
-
-.photo[data-index="1"] {
-  transform: rotate(6deg);
-  transform-origin: bottom center;
-  align-self: flex-end;
-  margin-left: -400px;
-  margin-top: 40px;
-  z-index: 1;
+.photo:hover {
+  transform: rotate(var(--rotate)) scale(1.04);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }

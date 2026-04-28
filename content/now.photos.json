@@ -1,4 +1,6 @@
 [
-  { "url": "/content/media/now-photo.png", "width": 3, "height": 4, "caption": "", "date": "" },
-  { "url": "/content/media/now-photo-2.png", "width": 3, "height": 4, "caption": "", "date": "" }
+  { "url": "/content/media/now-photo-1.png", "width": 3, "height": 4, "caption": "", "date": "" },
+  { "url": "/content/media/now-photo-2.png", "width": 3, "height": 4, "caption": "", "date": "" },
+  { "url": "/content/media/now-photo-3.png", "width": 3, "height": 4, "caption": "", "date": "" },
+  { "url": "/content/media/now-photo-4.png", "width": 3, "height": 4, "caption": "", "date": "" }
 ]
