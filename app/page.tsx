@@ -8,11 +8,10 @@ export default async function Home() {
 
   const splashFile = await fs.readFile(process.cwd() + '/content/splashes-elo1050.txt', 'utf8');
   const splashes = splashFile.split(/\n\n+/).map(l => l.trim()).filter(Boolean);
-  const initialIndex = Math.floor(Math.random() * splashes.length);
 
   return (
     <div className={styles.page}>
-      <Profile cv={cv} splashes={splashes} initialIndex={initialIndex} />
+      <Profile cv={cv} splashes={splashes} />
     </div>
   );
 }

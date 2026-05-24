@@ -9,12 +9,10 @@ import Footer from "./Footer";
 type ProfileProps = {
   cv: any,
   splashes?: string[],
-  initialIndex?: number,
 };
 const Profile: React.FC<ProfileProps> = ({
   cv,
   splashes,
-  initialIndex = 0,
 }) => {
   return (
     <div className={styles.profile}>
@@ -34,7 +32,7 @@ const Profile: React.FC<ProfileProps> = ({
         </div>
       </div>
       {splashes && splashes.length > 0 ?
-        <SpeechBubble splashes={splashes} initialIndex={initialIndex} />
+        <SpeechBubble splashes={splashes} />
       : null}
 
       {cv.general.about ?

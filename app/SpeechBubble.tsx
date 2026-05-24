@@ -23,11 +23,10 @@ const InfoIcon = () => (
 
 type SpeechBubbleProps = {
   splashes: string[];
-  initialIndex: number;
 };
 
-const SpeechBubble: React.FC<SpeechBubbleProps> = ({ splashes, initialIndex }) => {
-  const [index, setIndex] = useState(initialIndex);
+const SpeechBubble: React.FC<SpeechBubbleProps> = ({ splashes }) => {
+  const [index, setIndex] = useState(() => Math.floor(Math.random() * splashes.length));
   const [tooltipOpen, setTooltipOpen] = useState(false);
   const tooltipRef = useRef<HTMLSpanElement>(null);
 
