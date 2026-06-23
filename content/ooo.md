@@ -1,6 +1,6 @@
-# Out of office — May 2–18
+# Out of office — June 23 – July 1
 
-*Back at desk May 18. Not reachable while away.*
+*Back at desk July 1. Not reachable while away.*
 
 ---
 
@@ -15,7 +15,7 @@
 
 ### Where we are
 
-First 50-unit batch is complete and shipped. Second 50-unit batch is in production at SNA (Fremont) — currently capped at ~25 fully buildable units due to end-of-quarter supply constraints on the AIM4 modules. Production resumes for the second 50 cases the week of May 18 when I'm back.
+First 50-unit batch is complete and shipped. Second 50-unit batch will finish production on Thursday 6/25.
 
 ### For SEs who need a kit or have an issue
 
@@ -25,16 +25,16 @@ First 50-unit batch is complete and shipped. Second 50-unit batch is in producti
 
 ---
 
-## Inventory Receipt/Transfer Order
-
-**Coverage:** Laura Pennick and Andy Lam will cover. If you are from Accounting please direct all questions to them.
-
----
-
 ## Logistics Exceptions and Tools
 
 **Coverage:** Please reach out to Orion Edens with any questions about tracking/weight tool functionality and resolutions for open tickets.
 
 ---
 
-All other escalations related to my work should go to **Cody DiCara**. Back at desk May 18. Not reachable while away.
+## Org1 Device Mutation
+
+**Coverage:** Waiting on Andrew Jacobson and Amanda Wang to circle back about allocation of engineering resources.
+
+---
+
+All other escalations related to my work should go to **Cody DiCara**. Back at desk July 1. Not reachable while away.
