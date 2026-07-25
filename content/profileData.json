@@ -43,20 +43,7 @@
           "url": "https://starbucks.com",
           "collaborators": [],
           "description": "Coded an interactive calendar app giving a 450-person organization visibility into how their work flows.",
-          "attachments": [
-         {
-          "type": "image",
-          "width": 1728,
-          "height": 2592,
-          "url": "/content/media/IMG_1204.png"
-        },
-        {
-          "type": "image",
-          "width": 2592,
-          "height": 1728,
-          "url": "/content/media/IMG_0830.png"
-        } 
-          ],
+          "attachments": [],
           "type": "workExperience",
           "title": "Project Management Intern",
           "company": "Starbucks",
